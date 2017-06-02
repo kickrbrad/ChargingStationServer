@@ -27,6 +27,7 @@
       // locate you.
       var map, infowindow, pos;
       function initMap() {
+      	parseCoordinates();
         var dicks = {lat: 34.0043724, lng: -84.5724989};
         map = new google.maps.Map(document.getElementById('map'), {
           center: dicks,
@@ -83,6 +84,10 @@
           // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
         }
+      }
+
+      function parseCoordinates() {
+
       }
 
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
